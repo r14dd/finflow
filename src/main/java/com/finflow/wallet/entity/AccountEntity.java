@@ -5,7 +5,7 @@ import java.math.BigDecimal;
 
 @Entity
 @Table(name = "accounts")
-public class AcccountEntity {
+public class AccountEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -25,11 +25,10 @@ public class AcccountEntity {
     private UserEntity user;
 
     // constructor
-    protected AcccountEntity() {}
+    protected AccountEntity() {}
 
-    public AcccountEntity
+    public AccountEntity
                         (
-                        Long id,
                         String accountNumber,
                         BigDecimal balance,
                         String currency,

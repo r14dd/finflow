@@ -21,7 +21,7 @@ public class UserEntity {
             cascade = CascadeType.ALL,
             orphanRemoval = true
     )
-    private List<AcccountEntity> accounts = new ArrayList<>();
+    private List<AccountEntity> accounts = new ArrayList<>();
 
     protected UserEntity() {}
 
@@ -29,7 +29,7 @@ public class UserEntity {
         this.name = name;
     }
 
-    public void addAccount(AcccountEntity account) {
+    public void addAccount(AccountEntity account) {
         accounts.add(account);
     }
 
@@ -41,7 +41,7 @@ public class UserEntity {
         return name;
     }
 
-    public List<AcccountEntity> getAccounts() {
+    public List<AccountEntity> getAccounts() {
         return accounts;
     }
 }

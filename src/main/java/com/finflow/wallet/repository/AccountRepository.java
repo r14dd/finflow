@@ -1,6 +1,6 @@
 package com.finflow.wallet.repository;
 
-import com.finflow.wallet.entity.AcccountEntity;
+import com.finflow.wallet.entity.AccountEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface AccountRepository extends JpaRepository<AcccountEntity, Long> { }
+public interface AccountRepository extends JpaRepository<AccountEntity, Long> { }
