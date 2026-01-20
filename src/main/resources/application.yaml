@@ -15,3 +15,12 @@ spring:
     properties:
       hibernate:
         format_sql: true
+
+  resilience4j:
+    circuitbreaker:
+      instances:
+        exchangeRate:
+          sliding-window-size: 10
+          minimum-number-of-calls: 5
+          failure-rate-threshold: 50
+          wait-duration-in-open-state: 10s
