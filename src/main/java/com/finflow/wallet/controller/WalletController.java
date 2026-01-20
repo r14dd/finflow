@@ -45,4 +45,15 @@ public class WalletController {
                 account.getCurrency()
         );
     }
+
+    @PostMapping("/transfer")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void transfer(@RequestBody TransferRequest request){
+        walletService.transfer
+                (
+                    request.getFromAccount(),
+                    request.getToAccount(),
+                    request.getAmount()
+        );
+    }
 }

@@ -1,5 +1,6 @@
 package com.finflow.wallet.service;
 
+import com.finflow.wallet.dto.AccountResponse;
 import com.finflow.wallet.entity.AccountEntity;
 import com.finflow.wallet.entity.UserEntity;
 import com.finflow.wallet.repository.AccountRepository;
@@ -54,4 +55,26 @@ public class WalletService {
         private String generateAccountNumber() {
             return "AZ-" + UUID.randomUUID();
         }
-    }
+
+        @Transactional
+        public void transfer
+                (
+                        String fromAccountNumber,
+                        String toAccountNumber,
+                        BigDecimal amount
+                ) {
+            AccountEntity from = accountRepository.findByAccountNumber(fromAccountNumber)
+                    .orElseThrow(() -> new IllegalArgumentException("Source account not found."));
+
+            AccountEntity to = accountRepository.findByAccountNumber(toAccountNumber)
+                    .orElseThrow(() -> new IllegalArgumentException("Target account not found."));
+
+            if (from.getBalance().compareTo(amount) < 0) {
+                throw new IllegalStateException("Insufficient balance");
+            }
+
+            from.decreaseBalance(amount);
+            to.increaseBalance(amount);
+
+        }
+}

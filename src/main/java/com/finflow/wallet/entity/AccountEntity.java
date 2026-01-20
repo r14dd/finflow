@@ -28,18 +28,18 @@ public class AccountEntity {
     protected AccountEntity() {}
 
     public AccountEntity
-                        (
-                        String accountNumber,
-                        BigDecimal balance,
-                        String currency,
-                        UserEntity user
-                        )
-                        {
-                        this.accountNumber = accountNumber;
-                        this.balance = balance;
-                        this.currency = currency;
-                        this.user = user;
-                        }
+        (
+            String accountNumber,
+            BigDecimal balance,
+            String currency,
+            UserEntity user
+        )
+        {
+            this.accountNumber = accountNumber;
+            this.balance = balance;
+            this.currency = currency;
+            this.user = user;
+        }
 
     public Long getId() {
         return id;
@@ -59,5 +59,13 @@ public class AccountEntity {
 
     public UserEntity getUser() {
         return user;
+    }
+
+    public void decreaseBalance(BigDecimal amount) {
+        this.balance = this.balance.subtract(amount);
+    }
+
+    public void increaseBalance(BigDecimal amount) {
+        this.balance = this.balance.add(amount);
     }
 }
