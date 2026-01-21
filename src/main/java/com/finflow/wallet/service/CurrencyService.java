@@ -23,16 +23,18 @@ public class CurrencyService {
             return amount;
         }
 
-        String url =
-                "https://api.exchangerate.host/latest?base="
-                        + fromCurrency
-                        + "&symbols="
-                        + toCurrency;
+        String url = "https://open.er-api.com/v6/latest/" + fromCurrency;
 
         Map<?, ?> response = restTemplate.getForObject(url, Map.class);
-        Map<?, ?> rates = (Map<?, ?>) response.get("rates");
 
-        BigDecimal rate = new BigDecimal(rates.get(toCurrency).toString());
+        Map<?, ?> rates = (Map<?, ?>) response.get("rates");
+        Object rateObj = rates.get(toCurrency);
+
+        if (rateObj == null) {
+            throw new IllegalStateException("Rate not available for " + toCurrency);
+        }
+
+        BigDecimal rate = new BigDecimal(rateObj.toString());
 
         return amount
                 .multiply(rate)
