@@ -19,24 +19,6 @@ public class WalletController {
         this.walletService = walletService;
     }
 
-    @PostMapping
-    @ResponseStatus(HttpStatus.CREATED)
-    public UserResponse createUser(@RequestBody CreateUserRequest request) {
-
-        UserEntity user = walletService.createUserWithAccount
-                (
-                request.getName(),
-                request.getCurrency(),
-                request.getInitialBalance()
-                );
-
-        List<AccountResponse> accounts = user.getAccounts().stream()
-                .map(this::toAccountResponse)
-                .toList();
-
-        return new UserResponse(user.getId(), accounts);
-    }
-
     private AccountResponse toAccountResponse(AccountEntity account) {
         return new AccountResponse
                 (

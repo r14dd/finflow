@@ -36,32 +36,6 @@ public class WalletService {
         this.currencyService = currencyService;
     }
 
-    @Transactional
-    public UserEntity createUserWithAccount
-            (
-                    String userName,
-                    String currency,
-                    BigDecimal initialBalance
-            ) {
-
-        UserEntity user = new UserEntity(userName);
-
-        String accountNumber = generateAccountNumber();
-
-        AccountEntity account = new AccountEntity(
-                accountNumber,
-                initialBalance,
-                currency,
-                user
-        );
-
-        user.addAccount(account);
-        userRepository.save(user);
-        // saved automatically because of cascade
-
-        return user;
-    }
-
     private static final Logger log = LoggerFactory.getLogger(WalletService.class);
 
     private String generateAccountNumber() {
