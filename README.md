@@ -1,5 +1,5 @@
 
-# FinFlow Wallet Service
+# FinFlow Wallet API
 
 A backend digital wallet service built with Spring Boot demonstrating secure authentication, transactional integrity, and clean architectural design.
 
