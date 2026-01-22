@@ -1,3 +1,14 @@
+![Java](https://img.shields.io/badge/Java-17-red?logo=java)
+![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.3.6-brightgreen?logo=springboot)
+![Spring Security](https://img.shields.io/badge/Security-Spring%20Security-success?logo=springsecurity)
+![JWT](https://img.shields.io/badge/Auth-JWT-orange?logo=jsonwebtokens)
+![MySQL](https://img.shields.io/badge/Database-MySQL-blue?logo=mysql)
+
+![JPA](https://img.shields.io/badge/ORM-JPA%20Hibernate-informational)
+![Resilience4j](https://img.shields.io/badge/Resilience-Resilience4j-lightgrey)
+![Circuit Breaker](https://img.shields.io/badge/Pattern-Circuit%20Breaker-critical)
+![Transactions](https://img.shields.io/badge/ACID-Transactional-success)
+
 
 # FinFlow Wallet API
 
