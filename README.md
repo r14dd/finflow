@@ -1,13 +1,14 @@
-![Java](https://img.shields.io/badge/Java-17-red?logo=java)
-![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.3.6-brightgreen?logo=springboot)
-![Spring Security](https://img.shields.io/badge/Security-Spring%20Security-success?logo=springsecurity)
-![JWT](https://img.shields.io/badge/Auth-JWT-orange?logo=jsonwebtokens)
-![MySQL](https://img.shields.io/badge/Database-MySQL-blue?logo=mysql)
+<p align="center">
+  <img src="https://img.shields.io/badge/Java-111827?style=for-the-badge&logo=openjdk&logoColor=ED8B00" alt="Java" />
+  <img src="https://img.shields.io/badge/Spring%20Boot-111827?style=for-the-badge&logo=springboot&logoColor=6DB33F" alt="Spring Boot" />
+  <img src="https://img.shields.io/badge/Spring%20Security-111827?style=for-the-badge&logo=springsecurity&logoColor=6DB33F" alt="Spring Security" />
+  <img src="https://img.shields.io/badge/JWT-111827?style=for-the-badge&logo=jsonwebtokens&logoColor=F5A623" alt="JWT" />
+  <img src="https://img.shields.io/badge/MySQL-111827?style=for-the-badge&logo=mysql&logoColor=4479A1" alt="MySQL" />
+  <img src="https://img.shields.io/badge/JPA%20Hibernate-111827?style=for-the-badge&logo=hibernate&logoColor=59666C" alt="JPA Hibernate" />
+  <img src="https://img.shields.io/badge/Resilience4j-111827?style=for-the-badge&logo=java&logoColor=9CA3AF" alt="Resilience4j" />
+  <img src="https://img.shields.io/badge/Circuit%20Breaker-111827?style=for-the-badge&logo=apachekafka&logoColor=F59E0B" alt="Circuit Breaker" />
+</p>
 
-![JPA](https://img.shields.io/badge/ORM-JPA%20Hibernate-informational)
-![Resilience4j](https://img.shields.io/badge/Resilience-Resilience4j-lightgrey)
-![Circuit Breaker](https://img.shields.io/badge/Pattern-Circuit%20Breaker-critical)
-![Transactions](https://img.shields.io/badge/ACID-Transactional-success)
 
 
 # FinFlow Wallet API
